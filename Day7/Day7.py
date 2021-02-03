@@ -1,4 +1,8 @@
 import itertools
+import time
+
+start = time.time()
+print("Timer started")
 def isNumber(s):
     try:
         int(s)
@@ -77,3 +81,5 @@ def recursiveCount(s):
         c += int(x[0]) * recursiveCount(x[1:])
     else: return c
 print(recursiveCount("shinygold")-1)
+end = time.time()
+print("Timer ended: ", end - start)
