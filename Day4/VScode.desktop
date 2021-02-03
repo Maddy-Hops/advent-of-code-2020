@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=VSCode
+Comment=Edit code files
+Exec=code %f
+Terminal=false
+Type=Application
+Icon=code
+Categories=TextEditor;
+StartupNotify=true
+MimeType=text/x-text;
