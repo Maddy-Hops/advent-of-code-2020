@@ -76,10 +76,9 @@ def recursiveCount(s):
         return 1
     secondaryBags = [x for x in colors[s]]
     c = 1
-    print(secondaryBags)
     for x in secondaryBags:
         c += int(x[0]) * recursiveCount(x[1:])
     else: return c
 print(recursiveCount("shinygold")-1)
 end = time.time()
-print("Timer ended: ", end - start)
+print("Execution time: ", ((end - start)*1000000//10/100)," ms")
