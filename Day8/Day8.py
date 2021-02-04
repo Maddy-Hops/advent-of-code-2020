@@ -1,3 +1,5 @@
+import time
+start = time.time()
 with open("/home/maddy/Documents/AoC-2020/Day8/input.txt","r") as f:
     data = [x.strip("\n") for x in f.readlines()]
 accumulator = 0
@@ -47,6 +49,8 @@ while True:
             print("Accumulator is: ", accumulator)
             print("Success")
             print(i_to_change)
+            end = time.time()
+            print("Execution time: ", ((end - start)*1000000//10/100)," ms")
             exit()
     data = old_data.copy()
     i_to_change += 1
