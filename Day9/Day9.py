@@ -22,7 +22,6 @@ while True:
         weakness = new_item
         break
     i += 1
-print(weakness)
 j = 0
 while True:
     i = j
