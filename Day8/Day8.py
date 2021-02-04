@@ -1,6 +1,6 @@
 import time
 start = time.time()
-with open("/home/maddy/Documents/AoC-2020/Day8/input.txt","r") as f:
+with open("input.txt","r") as f:
     data = [x.strip("\n") for x in f.readlines()]
 accumulator = 0
 i = 0
@@ -33,8 +33,6 @@ while True:
         data[i_to_change] = data[i_to_change].replace("jmp","nop")
     elif data[i_to_change][:3] == "nop":
         data[i_to_change] = data[i_to_change].replace("nop","jmp")
-    if i_to_change == 7:
-        print("here")
     while True:
         ran_instructions.append(i)
         instruction = data[i]
@@ -48,7 +46,6 @@ while True:
         if i == len(data):
             print("Accumulator is: ", accumulator)
             print("Success")
-            print(i_to_change)
             end = time.time()
             print("Execution time: ", ((end - start)*1000000//10/100)," ms")
             exit()
