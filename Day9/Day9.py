@@ -39,5 +39,3 @@ while True:
 
 end = time.time()
 print("Execution time: ", ((end - start)*1000000//10/100)," ms")
-exit()
-
