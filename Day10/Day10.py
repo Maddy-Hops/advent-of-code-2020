@@ -1,5 +1,4 @@
 import time
-
 start = time.time()
 with open("/home/maddy/Documents/AoC-2020/Day10/input.txt","r") as f:
     data = [int(x.strip("\n")) for x in f.readlines()]
@@ -7,7 +6,6 @@ difference = [3]
 data.sort()
 data.append(max(data)+3)
 data.insert(0,0)
-
 for i in range(len(data)-1):
     difference.append(data[i+1]-data[i])
 print(difference.count(1) * difference.count(3))
