@@ -36,7 +36,6 @@ for i in n_data:
     paths = [0]
     recursiveWalk(i,i[0],paths)
     result *= paths[0]
-print(n_data)
 print(result)
 end = time.time()
 print("Execution time: ", ((end - start)*1000000//10/100)," ms")
